@@ -8,4 +8,4 @@ redirect_from:
   - /about.html
 ---
 
-I am a computer engineerning undergrad whose main interest consists in solving problems. 
+I am a computer engineerning undergrad ... 
