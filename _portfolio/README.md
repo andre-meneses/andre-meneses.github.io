@@ -19,14 +19,14 @@ We made use the following steps:
 ## High level state machine
 We start by modeling the miner with a high-level state machine. The circuit receives as inputs the second block message(m1), the target and the hashed first block(m0). Two hash transforms are made, as required by the bitcoin protocol, and the resulting hash is compared with the target. In the case where hash < target, the transaction block was successufuly validated and we are done, otherwise the nonce is updated and another iteration is needed.  
 
-<img src="./figures/hlsm.png" style="width: 55vw; min-width: 330px;"/>
+<img src="../images/hlsm.png" style="width: 55vw; min-width: 330px;"/>
 
 ## Datapath
 From the high-level state machine, it is possible to project an adequate datapath. The hash computations are performed by two 'digest' modules, whose inputs are controlled by multiplexers. Two sets of 16 32-bits registers store the 512 bits blocks and two sets of 8 32-bits registers(reg_init_0 and reg_init_1) store the initial hash variables. The registers 'Reg_hash' receive the hashed messages. 
 
 A 64-bit counter keeps track of the sha-256 current iteration, the 'cmp_16' comparator is responsible for the scheduling process and the 'cmp_target' comparator validates the produced hash. An 32 bit adder is responsible for the nonce update and a ROM stores the constants required by the digest module. To better understand the proposed datapath, one must know how the sha-256 computation works. The 'digest' module's operation has been abstracted.
 
-<img src="./figures/digest.png" style="width: 55vw; min-width: 330px; "/>
+<img src="../images/digest.png" style="width: 55vw; min-width: 330px; "/>
 
 ## Finite-state machine
 After the datapath definition, we must transform the high-level state machine to a finite-state machine. Each transform stage has been expanded into 4 states and the final fsm has 12 states. 
@@ -47,7 +47,7 @@ State 11. Update nonce
 
 State 12. Hash found
 
-<img src="./figures/fsm.png" style="width: 55vw; min-width: 330px; "/>
+<img src="../images/fsm.png" style="width: 55vw; min-width: 330px; "/>
 
 ## Controller Design
 
@@ -58,7 +58,7 @@ From the finite-state machine we coded the states and we assembled a truth table
 
 Since there are 12 states, a 4 bit register was used as a state register. 
 
-<img src="./figures/controlador.png" style="height: 30vw; min-height: 100px; "/>
+<img src="../images/controlador.png" style="height: 30vw; min-height: 100px; "/>
 
 The controller was simulated in Quartus II software and the it works as expected. 
 
