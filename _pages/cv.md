@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* B.S. in Computer Engineering, Federal University of Rio Grande do Norte, 2024 (expected)
+* B.Sc in Computer Engineering, Federal University of Rio Grande do Norte, 2024 (expected)
 
 Work experience
 ======
@@ -24,6 +24,8 @@ Programming languages and technologies
 * C++
 * Python
 * Latex
+* Linux
+* Git
 
   
 Languages 
