@@ -30,12 +30,13 @@ Languages
 ======
 * English - C1 (IELTS)
 * French - B2 (DELF)
-* Portugueses (Native)
+* Portuguese (Native)
 
 Awards and certifications
 ======
 * Finished High School with honors. 
-* Brazilian Chemistry Olympiad - Bronze medal (2 times)
+* CAPES University Talent Award
+* Brazilian Chemistry Olympiad - Bronze medal
 * Brazilian Astronomy Olympiad - Gold medal
 * National Sciences Olympiad - Commendation
 * State Chemistry Olympiad - Gold medal
