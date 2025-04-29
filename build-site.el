@@ -26,6 +26,69 @@
       (message "ox-tufte loaded successfully"))
   (error (message "Failed to load ox-tufte: %S" err)))
 
+
+;; Add ID resolution support for org-roam links
+(require 'org-id)
+
+;; Set up ID locations file
+(setq org-id-locations-file (expand-file-name "./.org-id-locations"))
+(setq org-id-track-globally t)
+(setq org-id-extra-files (directory-files-recursively "./content/" "\\.org$"))
+
+;; Generate ID locations database
+(org-id-update-id-locations org-id-extra-files)
+
+;; Configure org-id link export for HTML
+(org-link-set-parameters "id"
+                        :export (lambda (id desc format _)
+                          (cond
+                           ((eq format 'html)
+                            (let* ((file (org-id-find-id-file id))
+                                  (rel-file (when file
+                                              (file-relative-name file (expand-file-name "./content/"))))
+                                  (html-file (when rel-file
+                                              (concat (file-name-sans-extension rel-file) ".html"))))
+                              (if html-file
+                                 (format "<a href=\"%s\">%s</a>" html-file (or desc id))
+                                (format "<a href=\"#%s\">%s</a>" id (or desc id)))))
+                           (t nil))))
+
+;; Ensure org-tufte correctly handles ID links
+(defun my/org-tufte-handle-id-link (link desc info)
+  "Handle ID links specifically for Tufte HTML export."
+  (let* ((id (org-element-property :path link))
+         (file (org-id-find-id-file id))
+         (current-file (plist-get info :input-file))
+         ;; Get target file basename (without directory or extension)
+         (target-basename (when file
+                            (file-name-base file)))
+         ;; Check if the current file is in posts directory
+         (in-posts (and current-file (string-match "/posts/" current-file)))
+         ;; Check if target file is in posts directory
+         (target-in-posts (and file (string-match "/posts/" file))))
+    (cond
+     ;; Both in posts - just use basename
+     ((and in-posts target-in-posts)
+      (format "<a href=\"%s.html\">%s</a>" target-basename (or desc id)))
+     ;; In posts linking to main page
+     ((and in-posts (not target-in-posts))
+      (format "<a href=\"../%s.html\">%s</a>" target-basename (or desc id)))
+     ;; In main page linking to posts
+     ((and (not in-posts) target-in-posts)
+      (format "<a href=\"posts/%s.html\">%s</a>" target-basename (or desc id)))
+     ;; Both in main pages
+     (t
+      (format "<a href=\"%s.html\">%s</a>" target-basename (or desc id))))))
+
+;; Install the handler by advising the tufte link handler
+(defun my/enhance-tufte-link-handling (orig-fun link desc info)
+  "Advice to enhance ox-tufte link handling with better ID support."
+  (if (string= (org-element-property :type link) "id")
+      (my/org-tufte-handle-id-link link desc info)
+    (funcall orig-fun link desc info)))
+
+(advice-add 'org-tufte-maybe-margin-note-link :around #'my/enhance-tufte-link-handling)
+
 ;; Post management functions
 (defun my/get-post-date (file)
   "Extract date from post FILE."

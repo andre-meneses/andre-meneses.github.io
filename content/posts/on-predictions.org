@@ -10,4 +10,6 @@ However, it's fun to make bets against the universe and see what happens.
 
 The goal is to see whether I am better off flipping a coin or not. If I am not, at least I will know. [fn:1:It would at least simplify things, and perhaps spare me from the illusion of control]
 
+Backlinks: [[id:4db9cec9-425d-4507-aa84-c664b17e09db][Branch and Bound Methods in Modern ML]] 
+
 * Prediction Log

@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       4db9cec9-425d-4507-aa84-c664b17e09db
+:END:
 #+TITLE: Branch and Bound Methods in Modern ML
 #+DATE: <2024-04-29 Ter>
 #+AUTHOR: André Meneses

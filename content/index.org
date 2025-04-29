@@ -1,7 +1,7 @@
 #+TITLE: Maribondo
 #+AUTHOR: André Meneses
 
-I'm André [fn:1:Maribondo is a wasp found in the brazilian northeastern], a computer engineer currently pursuing a doctorate at Polytechnique Montréal. My research involves combinatorial optimization, machine learning, and methods like branch and bound.
+I'm André [fn:1: Maribondo is a type of wasp commonly found in the Brazilian Northeast], a computer engineer currently pursuing a doctorate at Polytechnique Montréal. My research involves combinatorial optimization, machine learning, and methods like branch and bound.
 
 This blog is a logbook, a place to store thoughts, predictions, and notes that may evolve into something larger. I'm thinking in public and using writing as a tool for better thinking.
 
