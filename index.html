@@ -1,41 +1,164 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>Maribondo</title>
+<meta name="author" content="André Meneses" />
 <meta name="generator" content="Org Mode" />
-<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" >
+<link rel="stylesheet" href="tufte.css" type="text/css" />
+<link rel="stylesheet" href="ox-tufte.css" type="text/css" />
+<style>
+                          /* Navbar styles */
+                          .navbar { 
+                            width: 100%; 
+                            padding: 0.25rem 0;
+                            border-bottom: 1px solid #ccc;
+                            margin-bottom: 0.5rem;
+                            margin-top: 2.5rem;
+                            font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+                          }
+                          .navbar ul { 
+                            list-style: none; 
+                            padding: 0; 
+                            margin: 0; 
+                            display: flex; 
+                            gap: 2rem; 
+                          }
+                          .navbar li { 
+                            margin: 0;
+                            font-size: 1.4rem;
+                          }
+                          .navbar a { 
+                            text-decoration: none;
+                            font-style: italic;
+                          }
+                          .navbar a:hover { 
+                            text-decoration: underline; 
+                          }
+
+			  h1.title {
+			       margin-top: 1rem;
+			  }
+
+			  h1 + p, 
+			  .subtitle + p,
+			  h1 + h2,
+			  .title + p {
+			    margin-top: 0.5rem;
+			  }
+
+			 #content {
+                             padding-top:2.5rem
+                          }
+                          
+                          /* Posts list on homepage */
+                          .posts-list { width: 75%; }
+                          .posts-list li { margin-bottom: 1rem; }
+                          .more-posts { margin-top: 2rem; }
+                          
+                          /* Posts archive page */
+                          .posts-archive { width: 65%; }
+                          .archive-year { margin-bottom: 0.1rem; }
+                          .archive-year h2 {
+                            font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+                            font-style: italic;
+                            font-weight: 400;
+                            font-size: 2.2rem;
+                            margin-top: 2.1rem;
+                            margin-bottom: 0.7rem;
+                            line-height: 1;
+                            border-bottom: 1px solid #ccc;
+                            padding-bottom: 0.5rem;
+                          }
+                          .post-entry {
+                            margin-bottom: 2rem;
+                            padding-bottom: 1.5rem;
+                          }
+                          .post-entry:not(:last-child) {
+                            border-bottom: 1px solid #eee;
+                          }
+                          .post-entry header {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: baseline;
+                            margin-bottom: 0.5rem;
+                          }
+                          .post-entry h3 {
+                            margin: 0;
+                            font-style: italic;
+                            font-size: 1.7rem;
+                            font-weight: 400;
+                          }
+                          .post-entry h3 a {
+                            text-decoration: none;
+                          }
+                          .post-entry h3 a:hover {
+                            text-decoration: underline;
+                          }
+                          .post-entry time {
+                            font-family: et-book-roman-old-style;
+                            color: #666;
+                            font-size: 1.1rem;
+                            margin-left: 1rem;
+                          }
+                          .post-description {
+                            line-height: 1.6;
+                            font-size: 1.4rem;
+                          }
+                          .post-date {
+                            font-family: et-book-roman-old-style;
+                            color: #666;
+                          }
+                          @media (max-width: 760px) {
+                            .posts-archive { width: 100%; }
+                            .post-entry header {
+                              flex-direction: column;
+                            }
+                            .post-entry time {
+                              margin-left: 0;
+                              margin-top: 0.5rem;
+                            }
+                          }
+                          @media (prefers-color-scheme: dark) {
+                            .post-date { color: #999; }
+                            .navbar { border-bottom-color: #333; }
+                            .archive-year h2 { border-bottom-color: #333; }
+                            .post-entry:not(:last-child) { border-bottom-color: #333; }
+                            .post-entry time { color: #999; }
+                          }
+                         </style>
 </head>
 <body>
-<div id="content" class="content">
-<div id="outline-container-orgaf74b0a" class="outline-2">
-<h2 id="orgaf74b0a">Maribondo</h2>
-<div class="outline-text-2" id="text-orgaf74b0a">
-<p>
-Thoughts, reflections and essays. Computer engineer, currently pursuing a doctorate at Polytechnique Montreal on what it appears to be an intersection between combinatorial optimization and machine learning.
+<header id="preamble" class="status">
+<nav class="navbar"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="posts/index.html">Posts</a></li></ul></nav>
+</header>
+<article id="content" class="content">
+<header>
+<h1 class="title">Maribondo</h1>
+</header><p>
+I'm André <label id='fnr.1' for='fnr-in.1.7953239' class='margin-toggle sidenote-number'><sup class='numeral'>1</sup></label><input type='checkbox' id='fnr-in.1.7953239' class='margin-toggle'><span class='sidenote'><sup class='numeral'>1</sup>Maribondo is a wasp found in the brazilian northeastern</span>, a computer engineer currently pursuing a doctorate at Polytechnique Montréal. My research involves combinatorial optimization, machine learning, and methods like branch and bound.
 </p>
 
-
 <p>
-Shall we test a codeblock
+This blog is a logbook, a place to store thoughts, predictions, and notes that may evolve into something larger. I'm thinking in public and using writing as a tool for better thinking.
 </p>
 
-<div class="org-src-container">
-<pre class="src src-emacs-lisp">(message <span style="font-style: italic;">"Hello"</span>)
-</pre>
+<section id="outline-container-org99c01cb" class="outline-2">
+<h2 id="org99c01cb">Latest Posts</h2>
+<div class="outline-text-2" id="text-org99c01cb">
+<div class="posts-list">
+<ul>
+<li><span class="post-date">2025-04-24</span> - <a href="posts/on-predictions.html">On Predictions</a></li>
+<li><span class="post-date">2024-04-29</span> - <a href="posts/branch-and-bound-ml.html">Branch and Bound Methods in Modern ML</a></li>
+</ul>
 </div>
-
-<p>
-<a href="./about.html">About me page</a>
-</p>
 </div>
-</div>
-</div>
-<div id="postamble" class="status">
+</section>
+</article>
+<footer id="postamble" class="status">
+<p class="author">Author: André Meneses</p>
 <p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.3 (<a href="https://orgmode.org">Org</a> mode 9.6.15)</p>
-</div>
+</footer>
 </body>
 </html>

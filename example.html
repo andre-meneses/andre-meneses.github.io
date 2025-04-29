@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Comprehensive ox-tufte Demo</title>
+<meta name="author" content="André Meneses" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="tufte.css" type="text/css" />
+<link rel="stylesheet" href="ox-tufte.css" type="text/css" />
+<style>
+                          /* Navbar styles */
+                          .navbar { 
+                            width: 100%; 
+                            padding: 0.25rem 0;
+                            border-bottom: 1px solid #ccc;
+                            margin-bottom: 0.5rem;
+                            margin-top: 2.5rem;
+                            font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+                          }
+                          .navbar ul { 
+                            list-style: none; 
+                            padding: 0; 
+                            margin: 0; 
+                            display: flex; 
+                            gap: 2rem; 
+                          }
+                          .navbar li { 
+                            margin: 0;
+                            font-size: 1.4rem;
+                          }
+                          .navbar a { 
+                            text-decoration: none;
+                            font-style: italic;
+                          }
+                          .navbar a:hover { 
+                            text-decoration: underline; 
+                          }
+
+			  h1.title {
+			       margin-top: 1rem;
+			  }
+
+			  h1 + p, 
+			  .subtitle + p,
+			  h1 + h2,
+			  .title + p {
+			    margin-top: 0.5rem;
+			  }
+
+			 #content {
+                             padding-top:2.5rem
+                          }
+                          
+                          /* Posts list on homepage */
+                          .posts-list { width: 75%; }
+                          .posts-list li { margin-bottom: 1rem; }
+                          .more-posts { margin-top: 2rem; }
+                          
+                          /* Posts archive page */
+                          .posts-archive { width: 65%; }
+                          .archive-year { margin-bottom: 0.1rem; }
+                          .archive-year h2 {
+                            font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+                            font-style: italic;
+                            font-weight: 400;
+                            font-size: 2.2rem;
+                            margin-top: 2.1rem;
+                            margin-bottom: 0.7rem;
+                            line-height: 1;
+                            border-bottom: 1px solid #ccc;
+                            padding-bottom: 0.5rem;
+                          }
+                          .post-entry {
+                            margin-bottom: 2rem;
+                            padding-bottom: 1.5rem;
+                          }
+                          .post-entry:not(:last-child) {
+                            border-bottom: 1px solid #eee;
+                          }
+                          .post-entry header {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: baseline;
+                            margin-bottom: 0.5rem;
+                          }
+                          .post-entry h3 {
+                            margin: 0;
+                            font-style: italic;
+                            font-size: 1.7rem;
+                            font-weight: 400;
+                          }
+                          .post-entry h3 a {
+                            text-decoration: none;
+                          }
+                          .post-entry h3 a:hover {
+                            text-decoration: underline;
+                          }
+                          .post-entry time {
+                            font-family: et-book-roman-old-style;
+                            color: #666;
+                            font-size: 1.1rem;
+                            margin-left: 1rem;
+                          }
+                          .post-description {
+                            line-height: 1.6;
+                            font-size: 1.4rem;
+                          }
+                          .post-date {
+                            font-family: et-book-roman-old-style;
+                            color: #666;
+                          }
+                          @media (max-width: 760px) {
+                            .posts-archive { width: 100%; }
+                            .post-entry header {
+                              flex-direction: column;
+                            }
+                            .post-entry time {
+                              margin-left: 0;
+                              margin-top: 0.5rem;
+                            }
+                          }
+                          @media (prefers-color-scheme: dark) {
+                            .post-date { color: #999; }
+                            .navbar { border-bottom-color: #333; }
+                            .archive-year h2 { border-bottom-color: #333; }
+                            .post-entry:not(:last-child) { border-bottom-color: #333; }
+                            .post-entry time { color: #999; }
+                          }
+                         </style>
+</head>
+<body>
+<header id="preamble" class="status">
+<nav class="navbar"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="posts/index.html">Posts</a></li></ul></nav>
+</header>
+<article id="content" class="content">
+<header>
+<h1 class="title">Comprehensive ox-tufte Demo</h1>
+</header>
+<section id="outline-container-orgee35afe" class="outline-2">
+<h2 id="orgee35afe">Introduction</h2>
+<div class="outline-text-2" id="text-orgee35afe">
+<label for='mn-auto.7849163' class='margin-toggle'>&#8853;</label><input type='checkbox' id='mn-auto.7849163' class='margin-toggle'><div class="marginnote" id="org7f16d57">
+<p>
+This is a block margin note at the start of a section.
+It demonstrates that we can have margin notes with:
+</p>
+<ul class="org-ul">
+<li>Multiple paragraphs</li>
+<li>Lists</li>
+<li><i>Italics</i> and <b>bold</b> text</li>
+<li>Even <a href="https://example.com">links</a></li>
+</ul>
+
+</div>
+
+<p>
+This is a demonstration of various ox-tufte features. Here's a regular paragraph with an inline margin note <label for='mn-auto.3277734' class='margin-toggle'>&#8853;</label><input type='checkbox' id='mn-auto.3277734' class='margin-toggle'><span class='marginnote'>This is an unnumbered margin note</span>. Notice how it flows with the text.
+</p>
+
+<p>
+Now let's use a numbered margin note <label id='fnr.1' for='fnr-in.1.6293918' class='margin-toggle sidenote-number'><sup class='numeral'>1</sup></label><input type='checkbox' id='fnr-in.1.6293918' class='margin-toggle'><span class='sidenote'><sup class='numeral'>1</sup>This will be numbered</span>. We can have as many numbered notes as we want.
+</p>
+</div>
+</section>
+
+<section id="outline-container-org7f6f53b" class="outline-2">
+<h2 id="org7f6f53b">Using Different Types of Notes</h2>
+<div class="outline-text-2" id="text-org7f6f53b">
+<p>
+Regular text here <label id='fnr.2' for='fnr-in.2.2856921' class='margin-toggle sidenote-number'><sup class='numeral'>2</sup></label><input type='checkbox' id='fnr-in.2.2856921' class='margin-toggle'><span class='sidenote'><sup class='numeral'>2</sup>Another numbered note with <i>italic</i> and <b>bold</b> text</span>. The margin notes can contain formatting.
+</p>
+
+<p>
+This paragraph has a longer note <label for='mn-auto.572549' class='margin-toggle'>&#8853;</label><input type='checkbox' id='mn-auto.572549' class='margin-toggle'><span class='marginnote'>A longer margin note that contains multiple sentences. This shows how margin notes handle longer content and remain readable in the margins</span>.
+</p>
+</div>
+</section>
+
+<section id="outline-container-org2dc1f56" class="outline-2">
+<h2 id="org2dc1f56">Working with Lists</h2>
+<div class="outline-text-2" id="text-org2dc1f56">
+<ol class="org-ol">
+<li>First item with a note <label id='fnr.3' for='fnr-in.3.1716693' class='margin-toggle sidenote-number'><sup class='numeral'>3</sup></label><input type='checkbox' id='fnr-in.3.1716693' class='margin-toggle'><span class='sidenote'><sup class='numeral'>3</sup>Notes work well with lists</span></li>
+<li>Second item</li>
+<li>Third item with note <label id='fnr.4' for='fnr-in.4.5738824' class='margin-toggle sidenote-number'><sup class='numeral'>4</sup></label><input type='checkbox' id='fnr-in.4.5738824' class='margin-toggle'><span class='sidenote'><sup class='numeral'>4</sup>Another note in a list</span></li>
+</ol>
+</div>
+</section>
+
+<section id="outline-container-org0043671" class="outline-2">
+<h2 id="org0043671">Block Margin Notes with Code</h2>
+<div class="outline-text-2" id="text-org0043671">
+<p>
+This section demonstrates a block margin note with code.
+</p>
+
+<label for='mn-auto.852288' class='margin-toggle'>&#8853;</label><input type='checkbox' id='mn-auto.852288' class='margin-toggle'><div class="marginnote" id="org7161a33">
+<p>
+Here's some code in a margin note:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">hello</span>():
+    <span style="font-weight: bold;">return</span> <span style="font-style: italic;">"Hello!"</span>
+</pre>
+</div>
+
+<p>
+The code is properly formatted.
+</p>
+
+</div>
+
+<p>
+The text continues after the block with code.
+</p>
+</div>
+</section>
+
+<section id="outline-container-orga55bdd4" class="outline-2">
+<h2 id="orga55bdd4">Epigraphs Example</h2>
+<div class="outline-text-2" id="text-orga55bdd4">
+<div class="epigraph" id="org0c8fbd7">
+<blockquote>
+<p>
+The best way to predict the future is to invent it.
+</p>
+</blockquote>
+
+</div>
+</div>
+</section>
+
+<section id="outline-container-org1520f12" class="outline-2">
+<h2 id="org1520f12">Full-width Content</h2>
+<div class="outline-text-2" id="text-org1520f12">
+<p>
+Some regular width content followed by a full-width section:
+</p>
+
+<figure class="fullwidth">
+<img src="/api/placeholder/800/400" alt="A full-width placeholder"/>
+<figcaption>
+This is a full-width figure caption
+</figcaption>
+</figure>
+</div>
+</section>
+
+<section id="outline-container-orgff52af2" class="outline-2">
+<h2 id="orgff52af2">Special Typography</h2>
+<div class="outline-text-2" id="text-orgff52af2">
+<span class="newthought">This paragraph</span>
+<p>
+begins with small caps using the newthought class, which is a typical Tufte style.
+</p>
+</div>
+</section>
+
+<section id="outline-container-org0b22235" class="outline-2">
+<h2 id="org0b22235">Tables and Figures</h2>
+<div class="outline-text-2" id="text-org0b22235">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Name</th>
+<th scope="col" class="org-right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">First</td>
+<td class="org-right">10</td>
+</tr>
+
+<tr>
+<td class="org-left">Second</td>
+<td class="org-right">20</td>
+</tr>
+
+<tr>
+<td class="org-left">Third</td>
+<td class="org-right">30</td>
+</tr>
+</tbody>
+</table>
+
+<label for='mn-auto.7200933' class='margin-toggle'>&#8853;</label><input type='checkbox' id='mn-auto.7200933' class='margin-toggle'><div class="marginnote" id="org79c4fb7">
+<p>
+Tables can have margin notes too! This explains the data in the table.
+</p>
+
+</div>
+</div>
+</section>
+
+<section id="outline-container-org8a1512e" class="outline-2">
+<h2 id="org8a1512e">Final Notes</h2>
+<div class="outline-text-2" id="text-org8a1512e">
+<p>
+This concludes our demonstration of ox-tufte features <label id='fnr.5' for='fnr-in.5.3252421' class='margin-toggle sidenote-number'><sup class='numeral'>5</sup></label><input type='checkbox' id='fnr-in.5.3252421' class='margin-toggle'><span class='sidenote'><sup class='numeral'>5</sup>A final numbered note to wrap things up</span>.
+</p>
+</div>
+</section>
+</article>
+<footer id="postamble" class="status">
+<p class="author">Author: André Meneses</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.3 (<a href="https://orgmode.org">Org</a> mode 9.6.15)</p>
+</footer>
+</body>
+</html>

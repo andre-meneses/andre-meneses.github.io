@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>About me</title>
+<title>Branch and Bound Methods in Modern ML</title>
 <meta name="author" content="André Meneses" />
+<meta name="description" content="Exploring the intersection of traditional optimization techniques with modern machine learning approaches." />
 <meta name="generator" content="Org Mode" />
-<link rel="stylesheet" href="tufte.css" type="text/css" />
-<link rel="stylesheet" href="ox-tufte.css" type="text/css" />
+<link rel="stylesheet" href="../tufte.css" type="text/css" />
+<link rel="stylesheet" href="../ox-tufte.css" type="text/css" />
 <style>
                           /* Navbar styles */
                           .navbar { 
@@ -48,12 +49,12 @@
 			    margin-top: 0.5rem;
 			  }
 
-			 #content {
+                          #content {
                              padding-top:2.5rem
-                          }
+                          } 
                           
                           /* Posts list on homepage */
-                          .posts-list { width: 75%; }
+                          .posts-list { width: 65%; }
                           .posts-list li { margin-bottom: 1rem; }
                           .more-posts { margin-top: 2rem; }
                           
@@ -65,15 +66,16 @@
                             font-style: italic;
                             font-weight: 400;
                             font-size: 2.2rem;
-                            margin-top: 2.1rem;
-                            margin-bottom: 0.7rem;
+                            margin-top: 1.5rem;
+                            margin-bottom: 0.5rem;
                             line-height: 1;
                             border-bottom: 1px solid #ccc;
-                            padding-bottom: 0.5rem;
+                            padding-bottom: 0.1rem;
                           }
                           .post-entry {
                             margin-bottom: 2rem;
                             padding-bottom: 1.5rem;
+                            padding-top: 1.5rem;
                           }
                           .post-entry:not(:last-child) {
                             border-bottom: 1px solid #eee;
@@ -131,40 +133,107 @@
 </head>
 <body>
 <header id="preamble" class="status">
-<nav class="navbar"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="posts/index.html">Posts</a></li></ul></nav>
+<nav class="navbar"><ul><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../posts/index.html">Posts</a></li></ul></nav>
 </header>
 <article id="content" class="content">
 <header>
-<h1 class="title">About me</h1>
-</header><p>
-I'm André.
+<h1 class="title">Branch and Bound Methods in Modern ML</h1>
+</header>
+<section id="outline-container-org7f16d57" class="outline-2">
+<h2 id="org7f16d57">Introduction</h2>
+<div class="outline-text-2" id="text-org7f16d57">
+<p>
+Branch and bound methods have been a cornerstone of combinatorial optimization for decades. But how do they fit into the modern machine learning landscape? In this post, we'll explore some interesting intersections between these classical techniques and contemporary ML approaches.
+</p>
+</div>
+</section>
+
+<section id="outline-container-org0ce0959" class="outline-2">
+<h2 id="org0ce0959">The Classical Approach</h2>
+<div class="outline-text-2" id="text-org0ce0959">
+<label for='mn-auto.3277734' class='margin-toggle'>&#8853;</label><input type='checkbox' id='mn-auto.3277734' class='margin-toggle'><div class="marginnote" id="org99c01cb">
+<p>
+Branch and bound was first proposed by A. H. Land and A. G. Doig in 1960 for discrete programming.
 </p>
 
-<p>
-Computer engineer, currently pursuing a doctorate at Polytechnique Montréal. My research will likely involve combinatorial optimization, machine learning, and methods like branch and bound, but it’s still taking shape.
-</p>
+</div>
 
 <p>
-This blog is a logbook. A place to store thoughts I don’t want to lose, predictions I’ll probably regret, and notes that may (or may not) become something larger.
+The traditional branch and bound algorithm follows a divide-and-conquer approach:
 </p>
 
+<ol class="org-ol">
+<li>Branching: Divide the feasible region into smaller subregions</li>
+<li>Bounding: Compute bounds for each subregion</li>
+<li>Pruning: Eliminate subregions that cannot contain the optimal solution</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-keyword">def</span> <span class="org-function-name">branch_and_bound</span>(problem):
+    <span class="org-variable-name">queue</span> <span class="org-operator">=</span> [initial_node]
+    <span class="org-variable-name">best_solution</span> <span class="org-operator">=</span> <span class="org-builtin">float</span>(<span class="org-string">'inf'</span>)
+
+    <span class="org-keyword">while</span> queue:
+        <span class="org-variable-name">node</span> <span class="org-operator">=</span> queue.pop()
+        <span class="org-keyword">if</span> node.bound <span class="org-operator">&lt;</span> best_solution:
+            <span class="org-variable-name">left</span>, <span class="org-variable-name">right</span> <span class="org-operator">=</span> branch(node)
+            queue.extend([left, right])
+    <span class="org-keyword">return</span> best_solution
+</pre>
+</div>
+</div>
+</section>
+
+<section id="outline-container-orgb948b55" class="outline-2">
+<h2 id="orgb948b55">Integration with Machine Learning</h2>
+<div class="outline-text-2" id="text-orgb948b55">
+<label for='mn-auto.4993595' class='margin-toggle'>&#8853;</label><input type='checkbox' id='mn-auto.4993595' class='margin-toggle'><div class="marginnote" id="org9639605">
 <p>
-I’m not trying to teach anything here, I'm just thinking in public, and using writing as a way to do that slightly better.
+Recent work has shown that neural networks can learn effective branching strategies, often outperforming traditional heuristics.
 </p>
 
-<p>
-This site will likely change over time. That’s the point.
-</p>
+</div>
 
 <p>
-You can find me on:
+Modern ML approaches have enhanced branch and bound in several ways:
 </p>
+
+<ol class="org-ol">
+<li>Learning branching decisions</li>
+<li>Predicting tight bounds</li>
+<li>Identifying promising regions to explore</li>
+</ol>
+</div>
+</section>
+
+<section id="outline-container-org9beed48" class="outline-2">
+<h2 id="org9beed48">Future Directions</h2>
+<div class="outline-text-2" id="text-org9beed48">
+<p>
+The integration of ML with branch and bound opens up exciting possibilities:
+</p>
+
 <ul class="org-ul">
-<li><a href="https://github.com/andre-meneses">GitHub</a></li>
-<li><a href="https://www.linkedin.com/in/andr%C3%A9-m-090a9a124/">LinkedIn</a></li>
+<li>Adaptive branching strategies</li>
+<li>Learned pruning rules</li>
+<li>Neural guided search</li>
 </ul>
+</div>
+</section>
+
+<section id="outline-container-org2dc1f56" class="outline-2">
+<h2 id="org2dc1f56">References</h2>
+<div class="outline-text-2" id="text-org2dc1f56">
+<ol class="org-ol">
+<li>Land, A. H., &amp; Doig, A. G. (1960). An automatic method of solving discrete programming problems. Econometrica</li>
+<li>Khalil, E. B., et al. (2016). Learning to Branch in Mixed Integer Programming</li>
+<li>Gasse, M., et al. (2019). Exact Combinatorial Optimization with Graph Convolutional Neural Networks</li>
+</ol>
+</div>
+</section>
 </article>
 <footer id="postamble" class="status">
+<p class="date">Date: 2024-04-29 Mon 00:00</p>
 <p class="author">Author: André Meneses</p>
 <p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.3 (<a href="https://orgmode.org">Org</a> mode 9.6.15)</p>
 </footer>
