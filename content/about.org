@@ -1,0 +1,11 @@
+* About me
+
+I'm André.
+
+Computer engineer, currently pursuing a doctorate at Polytechnique Montréal. My research will likely involve combinatorial optimization, machine learning, and methods like branch and bound, but it’s still taking shape.
+
+This blog is a logbook. A place to store thoughts I don’t want to lose, predictions I’ll probably regret, and notes that may (or may not) become something larger.
+
+I’m not trying to teach anything here, I'm just thinking in public, and using writing as a way to do that slightly better.
+
+This site will likely change over time. That’s the point.

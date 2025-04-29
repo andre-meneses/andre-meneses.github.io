@@ -1,0 +1,14 @@
+* Maribondo
+
+Thoughts, reflections and essays. Computer engineer, currently pursuing a doctorate at Polytechnique Montreal on what it appears to be an intersection between combinatorial optimization and machine learning.
+
+
+Shall we test a codeblock
+
+#+begin_src emacs-lisp
+(message "Hello")
+#+end_src
+
+[[./about.org][About me page]]
+
+
