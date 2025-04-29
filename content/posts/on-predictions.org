@@ -1,0 +1,13 @@
+#+TITLE: On Predictions
+#+DATE: <2025-04-24 Thu>
+#+AUTHOR: André Meneses
+#+FILETAGS: :predictions:fun:coinflip:
+#+DESCRIPTION: My personal log of predictions, bets against the universe, and whether I should just flip a coin instead.
+
+Most predictions are garbage, as Nate Silver and Nassim Taleb love to argue. It appears that the world is simply too complex for one to make sufficiently precise predictions about most things that matter to us.
+
+However, it's fun to make bets against the universe and see what happens.
+
+The goal is to see whether I am better off flipping a coin or not. If I am not, at least I will know. [fn:1:It would at least simplify things, and perhaps spare me from the illusion of control]
+
+* Prediction Log

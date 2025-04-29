@@ -1,4 +1,6 @@
-* About me
+#+TITLE: About me
+#+AUTHOR: André Meneses
+#+OPTIONS: toc:nil num:nil
 
 I'm André.
 
@@ -9,3 +11,9 @@ This blog is a logbook. A place to store thoughts I don’t want to lose, predic
 I’m not trying to teach anything here, I'm just thinking in public, and using writing as a way to do that slightly better.
 
 This site will likely change over time. That’s the point.
+
+You can find me on:
+- [[https://github.com/andre-meneses][GitHub]]
+- [[https://www.linkedin.com/in/andré-m-090a9a124/][LinkedIn]]
+
+

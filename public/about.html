@@ -1,21 +1,142 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>About me</title>
 <meta name="author" content="André Meneses" />
 <meta name="generator" content="Org Mode" />
-<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" >
+<link rel="stylesheet" href="tufte.css" type="text/css" />
+<link rel="stylesheet" href="ox-tufte.css" type="text/css" />
+<style>
+                          /* Navbar styles */
+                          .navbar { 
+                            width: 100%; 
+                            padding: 0.25rem 0;
+                            border-bottom: 1px solid #ccc;
+                            margin-bottom: 0.5rem;
+                            margin-top: 2.5rem;
+                            font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+                          }
+                          .navbar ul { 
+                            list-style: none; 
+                            padding: 0; 
+                            margin: 0; 
+                            display: flex; 
+                            gap: 2rem; 
+                          }
+                          .navbar li { 
+                            margin: 0;
+                            font-size: 1.4rem;
+                          }
+                          .navbar a { 
+                            text-decoration: none;
+                            font-style: italic;
+                          }
+                          .navbar a:hover { 
+                            text-decoration: underline; 
+                          }
+
+			  h1.title {
+			       margin-top: 1rem;
+			  }
+
+			  h1 + p, 
+			  .subtitle + p,
+			  h1 + h2,
+			  .title + p {
+			    margin-top: 0.5rem;
+			  }
+
+			 #content {
+                             padding-top:2.5rem
+                          }
+                          
+                          /* Posts list on homepage */
+                          .posts-list { width: 75%; }
+                          .posts-list li { margin-bottom: 1rem; }
+                          .more-posts { margin-top: 2rem; }
+                          
+                          /* Posts archive page */
+                          .posts-archive { width: 65%; }
+                          .archive-year { margin-bottom: 0.1rem; }
+                          .archive-year h2 {
+                            font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+                            font-style: italic;
+                            font-weight: 400;
+                            font-size: 2.2rem;
+                            margin-top: 2.1rem;
+                            margin-bottom: 0.7rem;
+                            line-height: 1;
+                            border-bottom: 1px solid #ccc;
+                            padding-bottom: 0.5rem;
+                          }
+                          .post-entry {
+                            margin-bottom: 2rem;
+                            padding-bottom: 1.5rem;
+                          }
+                          .post-entry:not(:last-child) {
+                            border-bottom: 1px solid #eee;
+                          }
+                          .post-entry header {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: baseline;
+                            margin-bottom: 0.5rem;
+                          }
+                          .post-entry h3 {
+                            margin: 0;
+                            font-style: italic;
+                            font-size: 1.7rem;
+                            font-weight: 400;
+                          }
+                          .post-entry h3 a {
+                            text-decoration: none;
+                          }
+                          .post-entry h3 a:hover {
+                            text-decoration: underline;
+                          }
+                          .post-entry time {
+                            font-family: et-book-roman-old-style;
+                            color: #666;
+                            font-size: 1.1rem;
+                            margin-left: 1rem;
+                          }
+                          .post-description {
+                            line-height: 1.6;
+                            font-size: 1.4rem;
+                          }
+                          .post-date {
+                            font-family: et-book-roman-old-style;
+                            color: #666;
+                          }
+                          @media (max-width: 760px) {
+                            .posts-archive { width: 100%; }
+                            .post-entry header {
+                              flex-direction: column;
+                            }
+                            .post-entry time {
+                              margin-left: 0;
+                              margin-top: 0.5rem;
+                            }
+                          }
+                          @media (prefers-color-scheme: dark) {
+                            .post-date { color: #999; }
+                            .navbar { border-bottom-color: #333; }
+                            .archive-year h2 { border-bottom-color: #333; }
+                            .post-entry:not(:last-child) { border-bottom-color: #333; }
+                            .post-entry time { color: #999; }
+                          }
+                         </style>
 </head>
 <body>
-<div id="content" class="content">
-<div id="outline-container-org8ccd206" class="outline-2">
-<h2 id="org8ccd206">About me</h2>
-<div class="outline-text-2" id="text-org8ccd206">
-<p>
+<header id="preamble" class="status">
+<nav class="navbar"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="posts/index.html">Posts</a></li></ul></nav>
+</header>
+<article id="content" class="content">
+<header>
+<h1 class="title">About me</h1>
+</header><p>
 I'm André.
 </p>
 
@@ -34,12 +155,18 @@ I’m not trying to teach anything here, I'm just thinking in public, and using 
 <p>
 This site will likely change over time. That’s the point.
 </p>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
+
+<p>
+You can find me on:
+</p>
+<ul class="org-ul">
+<li><a href="https://github.com/andre-meneses">GitHub</a></li>
+<li><a href="https://www.linkedin.com/in/andr%C3%A9-m-090a9a124/">LinkedIn</a></li>
+</ul>
+</article>
+<footer id="postamble" class="status">
 <p class="author">Author: André Meneses</p>
 <p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 28.1 (<a href="https://orgmode.org">Org</a> mode 9.5.2)</p>
-</div>
+</footer>
 </body>
 </html>

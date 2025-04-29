@@ -1,0 +1,27 @@
+#+TITLE: Testing ox-tufte Features
+#+AUTHOR: André Meneses
+#+OPTIONS: html-style:nil
+
+* Introduction
+
+Some text with a margin note [[mn:][This is an unnumbered margin note]]. And we can continue writing.
+
+* Block Margin Notes
+
+This paragraph will have a block margin note.
+
+#+begin_marginnote
+This is a block margin note.
+It can contain multiple paragraphs and lists:
+
+- First item
+- Second item
+#+end_marginnote
+
+The text continues after the block margin note.
+
+* Simple List Example
+
+1. First item with a margin note [[mn:1][A note about the first item]]
+2. Second item
+3. Third item with another note [[mn:2][And a note about the third item]]

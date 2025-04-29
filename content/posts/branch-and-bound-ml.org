@@ -1,0 +1,61 @@
+#+TITLE: Branch and Bound Methods in Modern ML
+#+DATE: <2024-04-29 Ter>
+#+AUTHOR: André Meneses
+#+FILETAGS: :optimization:machine-learning:research:
+#+DESCRIPTION: Exploring the intersection of traditional optimization techniques with modern machine learning approaches.
+
+* Introduction
+
+Branch and bound methods have been a cornerstone of combinatorial optimization for decades. But how do they fit into the modern machine learning landscape? In this post, we'll explore some interesting intersections between these classical techniques and contemporary ML approaches.
+
+* The Classical Approach
+#+begin_marginnote
+Branch and bound was first proposed by A. H. Land and A. G. Doig in 1960 for discrete programming.
+#+end_marginnote
+
+The traditional branch and bound algorithm follows a divide-and-conquer approach:
+
+1. Branching: Divide the feasible region into smaller subregions
+2. Bounding: Compute bounds for each subregion
+3. Pruning: Eliminate subregions that cannot contain the optimal solution
+
+#+begin_src python
+def branch_and_bound(problem):
+    queue = [initial_node]
+    best_solution = float('inf')
+    
+    while queue:
+        node = queue.pop()
+        if node.bound < best_solution:
+            left, right = branch(node)
+            queue.extend([left, right])
+    return best_solution
+#+end_src
+
+* Integration with Machine Learning
+#+begin_marginnote
+Recent work has shown that neural networks can learn effective branching strategies, often outperforming traditional heuristics.
+#+end_marginnote
+
+Modern ML approaches have enhanced branch and bound in several ways:
+
+1. Learning branching decisions
+2. Predicting tight bounds
+3. Identifying promising regions to explore
+
+* Future Directions
+
+The integration of ML with branch and bound opens up exciting possibilities:
+
+- Adaptive branching strategies
+- Learned pruning rules
+- Neural guided search
+
+* References
+1. Land, A. H., & Doig, A. G. (1960). An automatic method of solving discrete programming problems. Econometrica
+2. Khalil, E. B., et al. (2016). Learning to Branch in Mixed Integer Programming
+3. Gasse, M., et al. (2019). Exact Combinatorial Optimization with Graph Convolutional Neural Networks
+
+# Local Variables:
+# org-html-htmlize-output-type: css
+# End:

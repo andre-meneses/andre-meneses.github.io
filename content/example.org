@@ -1,0 +1,93 @@
+#+TITLE: Comprehensive ox-tufte Demo
+#+AUTHOR: André Meneses
+#+OPTIONS: html-style:nil toc:nil
+
+* Introduction
+
+#+begin_marginnote
+This is a block margin note at the start of a section.
+It demonstrates that we can have margin notes with:
+- Multiple paragraphs
+- Lists
+- /Italics/ and *bold* text
+- Even [[https://example.com][links]]
+#+end_marginnote
+
+This is a demonstration of various ox-tufte features. Here's a regular paragraph with an inline margin note [[mn:][This is an unnumbered margin note]]. Notice how it flows with the text.
+
+Now let's use a numbered margin note [fn:1:This will be numbered]. We can have as many numbered notes as we want.
+
+* Using Different Types of Notes
+
+Regular text here [fn:2:Another numbered note with /italic/ and *bold* text]. The margin notes can contain formatting.
+
+This paragraph has a longer note [[mn:][A longer margin note that contains multiple sentences. This shows how margin notes handle longer content and remain readable in the margins]].
+
+* Working with Lists
+
+1. First item with a note [fn:3:Notes work well with lists]
+2. Second item
+3. Third item with note [fn:4:Another note in a list]
+
+* Block Margin Notes with Code
+
+This section demonstrates a block margin note with code.
+
+#+begin_marginnote
+Here's some code in a margin note:
+
+#+begin_src python
+def hello():
+    return "Hello!"
+#+end_src
+
+The code is properly formatted.
+#+end_marginnote
+
+The text continues after the block with code.
+
+* Epigraphs Example
+
+#+begin_epigraph
+#+begin_quote
+The best way to predict the future is to invent it.
+#+end_quote
+
+#+caption: Alan Kay
+#+end_epigraph
+
+* Full-width Content
+
+Some regular width content followed by a full-width section:
+
+#+begin_export html
+<figure class="fullwidth">
+<img src="/api/placeholder/800/400" alt="A full-width placeholder"/>
+<figcaption>
+This is a full-width figure caption
+</figcaption>
+</figure>
+#+end_export
+
+* Special Typography
+
+#+begin_export html
+<span class="newthought">This paragraph</span>
+#+end_export 
+begins with small caps using the newthought class, which is a typical Tufte style.
+
+* Tables and Figures
+
+| Name   | Value |
+|--------+-------|
+| First  |    10 |
+| Second |    20 |
+| Third  |    30 |
+
+#+begin_marginnote
+Tables can have margin notes too! This explains the data in the table.
+#+end_marginnote
+
+* Final Notes
+
+This concludes our demonstration of ox-tufte features [fn:5:A final numbered note to wrap things up].
