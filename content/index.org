@@ -10,6 +10,7 @@ This blog is a logbook, a place to store thoughts, predictions, and notes that m
 #+begin_export html
 <div class="posts-list">
 <ul>
+<li><span class="post-date">2025-04-29</span> - <a href="posts/on-this-blog.html">On this blog</a></li>
 <li><span class="post-date">2025-04-23</span> - <a href="posts/on-predictions.html">On Predictions</a></li>
 <li><span class="post-date">2024-04-28</span> - <a href="posts/branch-and-bound-ml.html">Branch and Bound Methods in Modern ML</a></li>
 </ul>

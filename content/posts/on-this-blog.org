@@ -1,0 +1,33 @@
+#+TITLE: On this blog
+#+DATE: <2025-04-30 qua>
+#+AUTHOR: André Meneses
+#+FILETAGS: :meta:emacs:
+#+DESCRIPTION: Some technicalities of the inner workings of this website. 
+
+* On philosophy
+As one starts using Emacs—and especially Org mode—it becomes tempting to see every problem as a nail to be hammered with it. That's precisely the case with this blog. As I began leveraging Org's capabilities to organize my workflows, the idea of using it for writing, creating a repository of thoughts, and eventually posting them online became increasingly attractive, especially after reading [[https://gwern.net][gwern]] and [[https://andymatuschak.org][andymatuschak]], from which I draw heavy inspiration. Additionally, the idea of writing as a tool for thinking is quite popular, and I find it very logical, creating this blog thus follows naturally from that philosophy.
+
+One could argue that the notes themselves would suffice, and that posting them online merely caters to the author's ego--perhaps it does, but I hope some interesting discussions might emerge from potential readers. I can only see what I see; fresh perspectives are always welcome.
+
+My intention is to gradually build a network of notes, capturing topics I find interesting or worthy of exploration. Eventually, I hope to see long chains of interconnected notes and posts emerge, potentially leading to interesting insights. Naturally, much of what I'll write will represent my own views, mostly on technical subjects, and therefore may sometimes be incorrect. Let this blog also serve as a record of my shortcomings.
+
+* On mechanics
+
+This blog is written in Emacs using .org files, converted to HTML via the ox-tufte and org-publish packages, and automatically deployed to GitHub Pages through GitHub Actions. The stylesheet uses Tufte CSS, which I particularly like because it allows for nice margin notes.
+
+Since the Tufte stylesheet was originally designed for HTML, using .org files required the ox-tufte package to handle its specific markup features. Integrating org-roam involved custom functions to manage IDs properly, ensuring correct linking between posts. I've also created functions to automatically update the archive and latest posts sections. The navigation bar was added manually, with CSS customized to blend well with the Tufte style.
+
+Throughout this project, I received useful help from claude.ai, which sped up deployment  but left me with a somewhat superficial understanding of certain parts of the code. Nevertheless, the blog is functional, visually appealing, and supports margin notes, so I'm pretty satisfied.
+
+Initially, I tried using Hugo and ox-hugo, but the extra layers of abstraction, limited configurability (partly due to my own unfamiliarity), and a feeling of being disconnected from the technology made me choose a simpler approach with org-publish. The initial version of build-site.el was adapted from [[https://systemcrafters.net]]. The final version is available on [[https://github.com/andre-meneses/andre-meneses.github.io/blob/main/build-site.el][my GitHub]]
+
+
+
+
+
+
+
+
+
+
+
