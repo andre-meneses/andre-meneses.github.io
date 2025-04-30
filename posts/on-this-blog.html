@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Maribondo</title>
+<title>On this blog</title>
 <meta name="author" content="André Meneses" />
+<meta name="description" content="Some technicalities of the inner workings of this website." />
 <meta name="generator" content="Org Mode" />
-<link rel="stylesheet" href="tufte.css" type="text/css" />
-<link rel="stylesheet" href="ox-tufte.css" type="text/css" />
+<link rel="stylesheet" href="../tufte.css" type="text/css" />
+<link rel="stylesheet" href="../ox-tufte.css" type="text/css" />
 <style>
                           /* Navbar styles */
                           .navbar { 
@@ -48,12 +49,12 @@
 			    margin-top: 0.5rem;
 			  }
 
-			 #content {
+                          #content {
                              padding-top:2.5rem
-                          }
+                          } 
                           
                           /* Posts list on homepage */
-                          .posts-list { width: 75%; }
+                          .posts-list { width: 65%; }
                           .posts-list li { margin-bottom: 1rem; }
                           .more-posts { margin-top: 2rem; }
                           
@@ -65,15 +66,16 @@
                             font-style: italic;
                             font-weight: 400;
                             font-size: 2.2rem;
-                            margin-top: 2.1rem;
-                            margin-bottom: 0.7rem;
+                            margin-top: 1.5rem;
+                            margin-bottom: 0.5rem;
                             line-height: 1;
                             border-bottom: 1px solid #ccc;
-                            padding-bottom: 0.5rem;
+                            padding-bottom: 0.1rem;
                           }
                           .post-entry {
                             margin-bottom: 2rem;
                             padding-bottom: 1.5rem;
+                            padding-top: 1.5rem;
                           }
                           .post-entry:not(:last-child) {
                             border-bottom: 1px solid #eee;
@@ -131,33 +133,52 @@
 </head>
 <body>
 <header id="preamble" class="status">
-<nav class="navbar"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="posts/index.html">Posts</a></li></ul></nav>
+<nav class="navbar"><ul><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../posts/index.html">Posts</a></li></ul></nav>
 </header>
 <article id="content" class="content">
 <header>
-<h1 class="title">Maribondo</h1>
-</header><p>
-I'm André <label id='fnr.1' for='fnr-in.1.7953239' class='margin-toggle sidenote-number'><sup class='numeral'>1</sup></label><input type='checkbox' id='fnr-in.1.7953239' class='margin-toggle'><span class='sidenote'><sup class='numeral'>1</sup>Maribondo is a type of wasp commonly found in the Brazilian Northeast</span>, a computer engineer currently pursuing a doctorate at Polytechnique Montréal. My research involves combinatorial optimization, machine learning, and methods like branch and bound.
+<h1 class="title">On this blog</h1>
+</header>
+<section id="outline-container-org7f16d57" class="outline-2">
+<h2 id="org7f16d57">On philosophy</h2>
+<div class="outline-text-2" id="text-org7f16d57">
+<p>
+As one starts using Emacs—and especially Org mode—it becomes tempting to see every problem as a nail to be hammered with it. That's precisely the case with this blog. As I began leveraging Org's capabilities to organize my workflows, the idea of using it for writing, creating a repository of thoughts, and eventually posting them online became increasingly attractive, especially after reading <a href="https://gwern.net">gwern</a> and <a href="https://andymatuschak.org">andymatuschak</a>, from which I draw heavy inspiration. Additionally, the idea of writing as a tool for thinking is quite popular, and I find it very logical, creating this blog thus follows naturally from that philosophy.
 </p>
 
 <p>
-This blog is a logbook, a place to store thoughts, predictions, and notes that may evolve into something larger. I'm thinking in public and using writing as a tool for better thinking.
+One could argue that the notes themselves would suffice, and that posting them online merely caters to the author's ego&#x2013;perhaps it does, but I hope some interesting discussions might emerge from potential readers. I can only see what I see; fresh perspectives are always welcome.
 </p>
 
-<section id="outline-container-org99c01cb" class="outline-2">
-<h2 id="org99c01cb">Latest Posts</h2>
-<div class="outline-text-2" id="text-org99c01cb">
-<div class="posts-list">
-<ul>
-<li><span class="post-date">2025-04-30</span> - <a href="posts/on-this-blog.html">On this blog</a></li>
-<li><span class="post-date">2025-04-24</span> - <a href="posts/on-predictions.html">On Predictions</a></li>
-<li><span class="post-date">2024-04-29</span> - <a href="posts/branch-and-bound-ml.html">Branch and Bound Methods in Modern ML</a></li>
-</ul>
+<p>
+My intention is to gradually build a network of notes, capturing topics I find interesting or worthy of exploration. Eventually, I hope to see long chains of interconnected notes and posts emerge, potentially leading to interesting insights. Naturally, much of what I'll write will represent my own views, mostly on technical subjects, and therefore may sometimes be incorrect. Let this blog also serve as a record of my shortcomings.
+</p>
 </div>
+</section>
+
+<section id="outline-container-org99c01cb" class="outline-2">
+<h2 id="org99c01cb">On mechanics</h2>
+<div class="outline-text-2" id="text-org99c01cb">
+<p>
+This blog is written in Emacs using .org files, converted to HTML via the ox-tufte and org-publish packages, and automatically deployed to GitHub Pages through GitHub Actions. The stylesheet uses Tufte CSS, which I particularly like because it allows for nice margin notes.
+</p>
+
+<p>
+Since the Tufte stylesheet was originally designed for HTML, using .org files required the ox-tufte package to handle its specific markup features. Integrating org-roam involved custom functions to manage IDs properly, ensuring correct linking between posts. I've also created functions to automatically update the archive and latest posts sections. The navigation bar was added manually, with CSS customized to blend well with the Tufte style.
+</p>
+
+<p>
+Throughout this project, I received useful help from claude.ai, which sped up deployment  but left me with a somewhat superficial understanding of certain parts of the code. Nevertheless, the blog is functional, visually appealing, and supports margin notes, so I'm pretty satisfied.
+</p>
+
+<p>
+Initially, I tried using Hugo and ox-hugo, but the extra layers of abstraction, limited configurability (partly due to my own unfamiliarity), and a feeling of being disconnected from the technology made me choose a simpler approach with org-publish. The initial version of build-site.el was adapted from <a href="https://systemcrafters.net">https://systemcrafters.net</a>. The final version is available on <a href="https://github.com/andre-meneses/andre-meneses.github.io/blob/main/build-site.el">my GitHub</a>
+</p>
 </div>
 </section>
 </article>
 <footer id="postamble" class="status">
+<p class="date">Date: 2025-04-30 Wed 00:00</p>
 <p class="author">Author: André Meneses</p>
 <p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.3 (<a href="https://orgmode.org">Org</a> mode 9.6.15)</p>
 </footer>
