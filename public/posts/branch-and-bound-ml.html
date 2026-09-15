@@ -138,8 +138,7 @@
 <article id="content" class="content">
 <header>
 <h1 class="title">Branch and Bound Methods in Modern ML</h1>
-</header>
-<section id="outline-container-org7f16d57" class="outline-2">
+</header><section id="outline-container-org7f16d57" class="outline-2">
 <h2 id="org7f16d57">Introduction</h2>
 <div class="outline-text-2" id="text-org7f16d57">
 <p>
@@ -147,7 +146,6 @@ Branch and bound methods have been a cornerstone of combinatorial optimization f
 </p>
 </div>
 </section>
-
 <section id="outline-container-org0ce0959" class="outline-2">
 <h2 id="org0ce0959">The Classical Approach</h2>
 <div class="outline-text-2" id="text-org0ce0959">
@@ -169,21 +167,20 @@ The traditional branch and bound algorithm follows a divide-and-conquer approach
 </ol>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">branch_and_bound</span>(problem):
-    <span style="font-weight: bold; font-style: italic;">queue</span> = [initial_node]
-    <span style="font-weight: bold; font-style: italic;">best_solution</span> = <span style="font-weight: bold;">float</span>(<span style="font-style: italic;">'inf'</span>)
+<pre class="src src-python"><span class="org-keyword">def</span> <span class="org-function-name">branch_and_bound</span>(problem):
+    <span class="org-variable-name">queue</span> <span class="org-operator">=</span> [initial_node]
+    <span class="org-variable-name">best_solution</span> <span class="org-operator">=</span> <span class="org-builtin">float</span>(<span class="org-string">'inf'</span>)
 
-    <span style="font-weight: bold;">while</span> <span style="font-weight: bold; font-style: italic;">queue</span>:
-        node = queue.pop()
-        <span style="font-weight: bold;">if</span> node.bound &lt; <span style="font-weight: bold; font-style: italic;">best_solution</span>:
-            <span style="font-weight: bold; font-style: italic;">left</span>, <span style="font-weight: bold; font-style: italic;">right</span> = branch(node)
+    <span class="org-keyword">while</span> queue:
+        <span class="org-variable-name">node</span> <span class="org-operator">=</span> queue.pop()
+        <span class="org-keyword">if</span> node.bound <span class="org-operator">&lt;</span> best_solution:
+            <span class="org-variable-name">left</span>, <span class="org-variable-name">right</span> <span class="org-operator">=</span> branch(node)
             queue.extend([left, right])
-    <span style="font-weight: bold;">return</span> best_solution
+    <span class="org-keyword">return</span> best_solution
 </pre>
 </div>
 </div>
 </section>
-
 <section id="outline-container-orgb948b55" class="outline-2">
 <h2 id="orgb948b55">Integration with Machine Learning</h2>
 <div class="outline-text-2" id="text-orgb948b55">
@@ -205,7 +202,6 @@ Modern ML approaches have enhanced branch and bound in several ways:
 </ol>
 </div>
 </section>
-
 <section id="outline-container-org9beed48" class="outline-2">
 <h2 id="org9beed48">Future Directions</h2>
 <div class="outline-text-2" id="text-org9beed48">
@@ -220,7 +216,6 @@ The integration of ML with branch and bound opens up exciting possibilities:
 </ul>
 </div>
 </section>
-
 <section id="outline-container-org2dc1f56" class="outline-2">
 <h2 id="org2dc1f56">References</h2>
 <div class="outline-text-2" id="text-org2dc1f56">
@@ -233,9 +228,9 @@ The integration of ML with branch and bound opens up exciting possibilities:
 </section>
 </article>
 <footer id="postamble" class="status">
-<p class="date">Date: 2024-04-29 seg 00:00</p>
+<p class="date">Date: 2024-04-29 Mon 00:00</p>
 <p class="author">Author: André Meneses</p>
-<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 28.1 (<a href="https://orgmode.org">Org</a> mode 9.5.2)</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.11)</p>
 </footer>
 </body>
 </html>

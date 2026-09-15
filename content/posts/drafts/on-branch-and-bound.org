@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       84b1bec1-5064-44e4-a2b6-477ce7650a3a
+:END:
+#+TITLE: On heuristics ?
+#+DATE: <2025-05-19 Mon>
+#+AUTHOR: André Meneses
+#+FILETAGS: :branch-and-bound:heurisitics:complexity:
+#+DESCRIPTION: 
+
+- Finding an optimal decision tree is a NP-Complete problem, one must rely on a local, branch to branch optimization and hope that the resulting tree works well enough. 
+
+- There is a dimension where optimal solutions live but remain mostly unacessible, we can see shadows and glimpses by trying to peak over the walls but they live extremely well guarded.
+  We can very rarely break-in but we are quickly reminded that we belong outside.  
+
+- There is something deeply platonic about heuristics. 
+
+- We can model what to study as an optmization problem
+
+- The struggle between depth and breadth seem quite universal, a*, branch and bound, specialist x generalist
+
+* Backlinks
+[[id:26a1eb39-d221-43d2-8a2e-10742ecb901f][NP-Completeness]], [[id:1bd2d88c-7dd3-4939-8862-7ed30f5fffbb][Plato's ideal world]], [[id:19ca4135-6241-497a-96da-80af1d0ef7f4][Decision Trees]], [[id:4db9cec9-425d-4507-aa84-c664b17e09db][Branch and Bound Methods in Modern ML]]
+, [[id:6871f53c-4427-4403-92ab-792975c8584e][Branch and Bound Methods for Partitioning]]

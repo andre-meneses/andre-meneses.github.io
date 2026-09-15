@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       19ca4135-6241-497a-96da-80af1d0ef7f4
+:END:
+#+title: Theorem - Decision Trees
+#+filetags: :theorem:
+* Theorem: Decision Trees
+
+** Statement
+
+
+** Proof
+
+** Related Theorems
+
+** References
+
+** Backlinks

@@ -484,6 +484,7 @@
          :recursive t
          :base-directory "./content/posts"
          :publishing-directory "./public/posts"
+         :exclude "drafts/"
          ,@(my/get-project-plist "posts"))
 
         ("static"

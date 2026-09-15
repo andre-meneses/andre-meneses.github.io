@@ -1,31 +1,25 @@
-#+TITLE: On this blog
+#+TITLE: On this page
 #+DATE: <2025-04-30 qua>
 #+AUTHOR: André Meneses
 #+FILETAGS: :meta:emacs:
 #+DESCRIPTION: Some technicalities of the inner workings of this website. 
 
 * On philosophy
-As one starts using Emacs—and especially Org mode—it becomes tempting to see every problem as a nail to be hammered with it. That's precisely the case with this blog. As I began leveraging Org's capabilities to organize my workflows, the idea of using it for writing, creating a repository of thoughts, and eventually posting them online became increasingly attractive, especially after reading [[https://gwern.net][gwern]] and [[https://andymatuschak.org][andymatuschak]], from which I draw heavy inspiration. Additionally, the idea of writing as a tool for thinking is quite popular, and I find it very logical, creating this blog thus follows naturally. One could argue that the notes themselves would suffice, and that posting them online merely caters to the author's ego--perhaps it does, but I hope some interesting discussions might emerge from potential readers. I can only see what I see; fresh perspectives are always welcome.
 
-My intention is to gradually build a network of notes, capturing topics I find interesting or worthy of exploration. Eventually, I hope to see long chains of interconnected notes and posts emerge, potentially leading to interesting insights. Naturally, much of what I'll write will represent my own views, mostly on technical subjects, and therefore may sometimes be incorrect. Let this blog also serve as a record of my shortcomings.
+This site started because I was already using Emacs and Org mode for some of my writing, and publishing from the same environment seemed convenient.
+
+I also wanted a public place for notes and thoughts that I felt like putting online, without requiring them to become something more polished.
+
+The site is influenced by [[https://gwern.net][Gwern]] and [[https://andymatuschak.org][Andy Matuschak]], both in presentation and in the way they use personal websites for writing.
 
 * On mechanics
 
-This blog is written in Emacs using .org files, converted to HTML via the ox-tufte and org-publish packages, and automatically deployed to GitHub Pages through GitHub Actions. The stylesheet uses Tufte CSS, which I particularly like because it allows for nice margin notes.
+The site is written in Emacs using Org mode and published to HTML with =org-publish= and =ox-tufte=. It is deployed to GitHub Pages through GitHub Actions.
 
-Since the Tufte stylesheet was originally designed for HTML, using .org files required the ox-tufte package to handle its specific markup features. Integrating org-roam involved custom functions to manage IDs properly, ensuring correct linking between posts. I've also created functions to automatically update the archive and latest posts sections. The navigation bar was added manually, with CSS customized to blend well with the Tufte style.
+The visual style is based on Tufte CSS, mostly because I like its typography and support for sidenotes and margin notes. Since Tufte CSS was designed for HTML, =ox-tufte= handles the corresponding Org markup during export.
 
-Throughout this project, I received useful help from claude.ai, which sped up deployment  but left me with a somewhat superficial understanding of certain parts of the code. Nevertheless, the blog is functional, visually appealing, and supports margin notes, so I'm pretty satisfied.
+The site also integrates with org-roam. I added a few functions to preserve links between notes during publishing and to generate the archive and latest-posts sections automatically. The navigation bar and parts of the stylesheet are custom.
 
-Initially, I tried using Hugo and ox-hugo, but the extra layers of abstraction, limited configurability (partly due to my own unfamiliarity), and a feeling of being disconnected from the technology made me choose a simpler approach with org-publish. The initial version of build-site.el was adapted from [[https://systemcrafters.net]]. The final version is available on [[https://github.com/andre-meneses/andre-meneses.github.io/blob/main/build-site.el][my GitHub]]
+I initially experimented with Hugo and =ox-hugo=, but eventually preferred using =org-publish= directly. There are fewer layers between the Org files and the resulting site, which makes the setup easier for me to understand and modify.
 
-
-
-
-
-
-
-
-
-
-
+The original =build-site.el= was adapted from [[https://systemcrafters.net][System Crafters]] and has since been modified substantially for this site. The current version is available [[https://github.com/andre-meneses/andre-meneses.github.io/blob/main/build-site.el][on GitHub]].

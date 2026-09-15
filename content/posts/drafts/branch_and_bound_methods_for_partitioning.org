@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       6871f53c-4427-4403-92ab-792975c8584e
+:END:
+#+title:Branch and Bound Methods for Partitioning
+#+DATE: <2025-05-19 Mon>
+#+AUTHOR: André Meneses
+#+FILETAGS: :branch-and-bound:heurisitics:complexity:partioning:clustering
+#+DESCRIPTION: 
+
+* Branch and Bound Methods for Partitioning
+
+
+
+** Backlinks

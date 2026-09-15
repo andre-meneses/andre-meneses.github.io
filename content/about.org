@@ -4,16 +4,25 @@
 
 I'm André.
 
-Computer engineer, currently pursuing a doctorate at Polytechnique Montréal. My research will likely involve combinatorial optimization, machine learning, and methods like branch and bound, but it’s still taking shape.
+I'm a computer engineer and PhD student at Polytechnique Montréal. My interests are mostly around optimization, machine learning, interpretability, and latent representations.
 
-This blog is a logbook. A place to store thoughts I don’t want to lose, predictions I’ll probably regret, and notes that may (or may not) become something larger.
+* Publications
 
-I’m not trying to teach anything here, I'm just thinking in public, and using writing as a way to do that slightly better.
+** Journal articles
 
-This site will likely change over time. That’s the point.
+- André Meneses, R. C. F. Araújo, G. Corso, J. M. de Araújo, and T. Barros.
+  /A Self-Training U-Net Approach for First-Break Picking with Minimal Annotations/.
+  Geophysical Prospecting, 2026.
+  [[https://doi.org/10.1111/1365-2478.70233][DOI]]
 
-You can find me on:
+** Conference papers
+
+- M. H. Midingoyi, André Meneses, and D. Aloise.
+  /A Variable Neighborhood Search Heuristic for Semi-Supervised Minimum Sum-of-Squares Clustering/.
+  Variable Neighborhood Search, ICVNS 2025, Lecture Notes in Computer Science, vol. 16256, Springer, 2026.
+  [[https://doi.org/10.1007/978-3-032-19582-1_12][DOI]]
+
+* Elsewhere
+
 - [[https://github.com/andre-meneses][GitHub]]
 - [[https://www.linkedin.com/in/andré-m-090a9a124/][LinkedIn]]
-
-

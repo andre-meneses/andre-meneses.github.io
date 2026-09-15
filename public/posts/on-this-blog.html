@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>On this blog</title>
+<title>On this page</title>
 <meta name="author" content="André Meneses" />
 <meta name="description" content="Some technicalities of the inner workings of this website." />
 <meta name="generator" content="Org Mode" />
@@ -137,42 +137,44 @@
 </header>
 <article id="content" class="content">
 <header>
-<h1 class="title">On this blog</h1>
-</header>
-<section id="outline-container-org7f16d57" class="outline-2">
+<h1 class="title">On this page</h1>
+</header><section id="outline-container-org7f16d57" class="outline-2">
 <h2 id="org7f16d57">On philosophy</h2>
 <div class="outline-text-2" id="text-org7f16d57">
 <p>
-As one starts using Emacs—and especially Org mode—it becomes tempting to see every problem as a nail to be hammered with it. That's precisely the case with this blog. As I began leveraging Org's capabilities to organize my workflows, the idea of using it for writing, creating a repository of thoughts, and eventually posting them online became increasingly attractive, especially after reading <a href="https://gwern.net">gwern</a> and <a href="https://andymatuschak.org">andymatuschak</a>, from which I draw heavy inspiration. Additionally, the idea of writing as a tool for thinking is quite popular, and I find it very logical, creating this blog thus follows naturally from that philosophy.
+This site started because I was already using Emacs and Org mode for some of my writing, and publishing from the same environment seemed convenient.
 </p>
 
 <p>
-One could argue that the notes themselves would suffice, and that posting them online merely caters to the author's ego&#x2013;perhaps it does, but I hope some interesting discussions might emerge from potential readers. I can only see what I see; fresh perspectives are always welcome.
+I also wanted a public place for notes and thoughts that I felt like putting online, without requiring them to become something more polished.
 </p>
 
 <p>
-My intention is to gradually build a network of notes, capturing topics I find interesting or worthy of exploration. Eventually, I hope to see long chains of interconnected notes and posts emerge, potentially leading to interesting insights. Naturally, much of what I'll write will represent my own views, mostly on technical subjects, and therefore may sometimes be incorrect. Let this blog also serve as a record of my shortcomings.
+The site is influenced by <a href="https://gwern.net">Gwern</a> and <a href="https://andymatuschak.org">Andy Matuschak</a>, both in presentation and in the way they use personal websites for writing.
 </p>
 </div>
 </section>
-
 <section id="outline-container-org99c01cb" class="outline-2">
 <h2 id="org99c01cb">On mechanics</h2>
 <div class="outline-text-2" id="text-org99c01cb">
 <p>
-This blog is written in Emacs using .org files, converted to HTML via the ox-tufte and org-publish packages, and automatically deployed to GitHub Pages through GitHub Actions. The stylesheet uses Tufte CSS, which I particularly like because it allows for nice margin notes.
+The site is written in Emacs using Org mode and published to HTML with <code>org-publish</code> and <code>ox-tufte</code>. It is deployed to GitHub Pages through GitHub Actions.
 </p>
 
 <p>
-Since the Tufte stylesheet was originally designed for HTML, using .org files required the ox-tufte package to handle its specific markup features. Integrating org-roam involved custom functions to manage IDs properly, ensuring correct linking between posts. I've also created functions to automatically update the archive and latest posts sections. The navigation bar was added manually, with CSS customized to blend well with the Tufte style.
+The visual style is based on Tufte CSS, mostly because I like its typography and support for sidenotes and margin notes. Since Tufte CSS was designed for HTML, <code>ox-tufte</code> handles the corresponding Org markup during export.
 </p>
 
 <p>
-Throughout this project, I received useful help from claude.ai, which sped up deployment  but left me with a somewhat superficial understanding of certain parts of the code. Nevertheless, the blog is functional, visually appealing, and supports margin notes, so I'm pretty satisfied.
+The site also integrates with org-roam. I added a few functions to preserve links between notes during publishing and to generate the archive and latest-posts sections automatically. The navigation bar and parts of the stylesheet are custom.
 </p>
 
 <p>
-Initially, I tried using Hugo and ox-hugo, but the extra layers of abstraction, limited configurability (partly due to my own unfamiliarity), and a feeling of being disconnected from the technology made me choose a simpler approach with org-publish. The initial version of build-site.el was adapted from <a href="https://systemcrafters.net">https://systemcrafters.net</a>. The final version is available on <a href="https://github.com/andre-meneses/andre-meneses.github.io/blob/main/build-site.el">my GitHub</a>
+I initially experimented with Hugo and <code>ox-hugo</code>, but eventually preferred using <code>org-publish</code> directly. There are fewer layers between the Org files and the resulting site, which makes the setup easier for me to understand and modify.
+</p>
+
+<p>
+The original <code>build-site.el</code> was adapted from <a href="https://systemcrafters.net">System Crafters</a> and has since been modified substantially for this site. The current version is available <a href="https://github.com/andre-meneses/andre-meneses.github.io/blob/main/build-site.el">on GitHub</a>.
 </p>
 </div>
 </section>
@@ -180,7 +182,7 @@ Initially, I tried using Hugo and ox-hugo, but the extra layers of abstraction, 
 <footer id="postamble" class="status">
 <p class="date">Date: 2025-04-30 qua 00:00</p>
 <p class="author">Author: André Meneses</p>
-<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 28.1 (<a href="https://orgmode.org">Org</a> mode 9.5.2)</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.11)</p>
 </footer>
 </body>
 </html>

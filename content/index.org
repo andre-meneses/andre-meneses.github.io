@@ -1,18 +1,17 @@
 #+TITLE: Maribondo
 #+AUTHOR: André Meneses
 
-I'm André [fn:1: Maribondo is a type of wasp commonly found in the Brazilian Northeast], a computer engineer currently pursuing a doctorate at Polytechnique Montréal. My research involves combinatorial optimization, machine learning, and methods like branch and bound.
+Maribondo[fn:1: Maribondo is a type of wasp commonly found in the Brazilian Northeast] is where I keep ideas, notes, observations, predictions, and other things I want to come back to.
 
-This blog is a logbook, a place to store thoughts, predictions, and notes that may evolve into something larger. I'm thinking in public and using writing as a tool for better thinking.
+I don't have much of an editorial policy beyond writing about things I find worth thinking about.
 
 * Latest Posts
 
 #+begin_export html
 <div class="posts-list">
 <ul>
-<li><span class="post-date">2025-04-29</span> - <a href="posts/on-this-blog.html">On this blog</a></li>
-<li><span class="post-date">2025-04-23</span> - <a href="posts/on-predictions.html">On Predictions</a></li>
-<li><span class="post-date">2024-04-28</span> - <a href="posts/branch-and-bound-ml.html">Branch and Bound Methods in Modern ML</a></li>
+<li><span class="post-date">2025-04-30</span> - <a href="posts/on-this-blog.html">On this page</a></li>
+<li><span class="post-date">2025-04-24</span> - <a href="posts/on-predictions.html">On Predictions</a></li>
 </ul>
 </div>
 #+end_export
