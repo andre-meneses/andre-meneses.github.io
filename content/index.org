@@ -1,10 +1,7 @@
 #+TITLE: Maribondo
 #+AUTHOR: André Meneses
 
-Maribondo[fn:1: Maribondo is a type of wasp commonly found in the Brazilian Northeast] is where I keep ideas, notes, observations, predictions, and other things I want to come back to.
-
-I don't have much of an editorial policy beyond writing about things I find worth thinking about.
-
+Maribondo[fn:1: Maribondo is a type of wasp commonly found in the Brazilian Northeast] is where I keep ideas, notes, observations, predictions, and other things I find interesting. 
 * Latest Posts
 
 #+begin_export html
